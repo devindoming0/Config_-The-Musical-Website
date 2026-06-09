@@ -3,12 +3,6 @@ import { GraffitiConfig } from "./ConfigMark";
 export function Commons() {
   return (
     <section id="venue" className="border-b border-border">
-      {/* Big green graffiti divider */}
-      <div className="bg-background py-10 overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6">
-          <GraffitiConfig />
-        </div>
-      </div>
 
       <div className="max-w-[1400px] mx-auto px-6 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         <div className="lg:col-span-5">
