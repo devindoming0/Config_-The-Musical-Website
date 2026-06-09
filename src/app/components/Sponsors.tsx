@@ -17,8 +17,8 @@ const sponsors = [
   { name: "Webflow", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/webflow.svg" },
   { name: "Datadog", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/datadog.svg" },
   { name: "1Password", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/1password.svg" },
-  { name: "Pitch", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/pitch.svg" },
-  { name: "Mercury", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mercury.svg" },
+  { name: "Pitch", logo: "" },
+  { name: "Mercury", logo: "" },
 ];
 
 export function Sponsors() {
@@ -39,11 +39,15 @@ export function Sponsors() {
               key={s.name}
               className="border-r border-b border-border aspect-[2/1] flex items-center justify-center bg-card hover:bg-muted transition-colors p-6"
             >
-              <img
-                src={s.logo}
-                alt={s.name}
-                className="h-8 w-auto max-w-[80%] opacity-80 hover:opacity-100 transition-opacity invert"
-              />
+              {s.logo ? (
+                <img
+                  src={s.logo}
+                  alt={s.name}
+                  className="h-8 w-auto max-w-[80%] opacity-80 hover:opacity-100 transition-opacity invert"
+                />
+              ) : (
+                <span style={{ fontFamily: "'Figma Sans VF', sans-serif", fontSize: "1.5rem" }}>{s.name}</span>
+              )}
             </div>
           ))}
         </div>
