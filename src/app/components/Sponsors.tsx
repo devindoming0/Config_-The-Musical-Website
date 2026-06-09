@@ -1,8 +1,24 @@
 const sponsors = [
-  "Google", "Amazon", "Accenture", "Intuit", "Vercel",
-  "GitHub", "Notion", "Linear", "Loom", "Zapier",
-  "Anthropic", "Stripe", "Figma", "Shopify", "Cloudflare",
-  "Webflow", "Datadog", "1Password", "Pitch", "Mercury",
+  { name: "Google", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" },
+  { name: "Amazon", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazon.svg" },
+  { name: "Accenture", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/accenture.svg" },
+  { name: "Intuit", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/intuit.svg" },
+  { name: "Vercel", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vercel.svg" },
+  { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" },
+  { name: "Notion", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" },
+  { name: "Linear", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linear.svg" },
+  { name: "Loom", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/loom.svg" },
+  { name: "Zapier", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/zapier.svg" },
+  { name: "Anthropic", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg" },
+  { name: "Stripe", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stripe.svg" },
+  { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg" },
+  { name: "Shopify", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/shopify.svg" },
+  { name: "Cloudflare", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cloudflare.svg" },
+  { name: "Webflow", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/webflow.svg" },
+  { name: "Datadog", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/datadog.svg" },
+  { name: "1Password", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/1password.svg" },
+  { name: "Pitch", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/pitch.svg" },
+  { name: "Mercury", logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mercury.svg" },
 ];
 
 export function Sponsors() {
@@ -20,10 +36,14 @@ export function Sponsors() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 border-t border-l border-border">
           {sponsors.map((s) => (
             <div
-              key={s}
-              className="border-r border-b border-border aspect-[2/1] flex items-center justify-center bg-card hover:bg-muted transition-colors"
+              key={s.name}
+              className="border-r border-b border-border aspect-[2/1] flex items-center justify-center bg-card hover:bg-muted transition-colors p-6"
             >
-              <span style={{ fontFamily: "'Figma Sans VF', sans-serif", fontSize: "1.5rem" }}>{s}</span>
+              <img
+                src={s.logo}
+                alt={s.name}
+                className="h-8 w-auto max-w-[80%] opacity-80 hover:opacity-100 transition-opacity invert"
+              />
             </div>
           ))}
         </div>
