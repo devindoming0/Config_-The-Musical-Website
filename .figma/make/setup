@@ -1,0 +1,4 @@
+#!/bin/bash
+# System dependencies — cached after first run.
+# Node is expected to be available via the host environment.
+command -v node >/dev/null 2>&1 || { echo "Node.js is required but not installed." >&2; exit 1; }
